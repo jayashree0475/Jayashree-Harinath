@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,11 +5,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Jayashree Harinath's Portfolio</title>
 <style>
-    body { font-family: Arial, sans-serif; background-color: #f4f4f9; padding: 20px; }
-    .profile { text-align: center; }
-    .project { margin-bottom: 20px; }
-    .dropdown-content { display: none; padding: 10px; background-color: #fff; border: 1px solid #ccc; }
-    .contact { text-align: center; margin-top: 30px; }
+    body { 
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        background: url('background_image.jpg') no-repeat center center fixed; 
+        background-size: cover;
+        color: #fff;
+        padding: 20px;
+        margin: 0;
+    }
+    .profile, .contact, h2 { text-align: center; }
+    .project { 
+        margin: 20px auto; 
+        width: 80%;
+        text-align: center;
+    }
+    .dropdown-content { 
+        display: none; 
+        padding: 10px; 
+        background-color: rgba(0,0,0,0.8); 
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        margin-top: 5px;
+        width: 90%; /* Ensures dropdowns are not full width */
+        margin-left: auto;
+        margin-right: auto;
+    }
+    button {
+        background-color: #00aaff;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    button:hover {
+        background-color: #0088cc;
+    }
+    img { width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto; }
 </style>
 </head>
 <body>
@@ -20,6 +58,9 @@
     <p>A software developer with roots in India and currently calling the UK my home. Excited to connect and share ideas with you!
     I absolutely love staying active with yoga, unwinding with a good movie, and diving into the exciting world of new technologies—especially in software development and AI. There’s always something fascinating to learn and explore!</p>
 </div>
+
+<!-- Adding the tech screenshot before projects -->
+<img src="Screenshot 2025-03-13 212539.png" alt="Tech Stack Screenshot" style="width:100%; margin-top:20px;">
 
 <h2>Experience</h2>
 <p>With over 4 years of experience as a Python Backend Developer,
@@ -38,7 +79,7 @@ I’ve had the opportunity to work on exciting projects involving cloud services
 
 <div class="project">
     <button onclick="toggleDropdown('citation')">Citation: Document Scanner</button>
-    <div id="citation" class="dropdown-content">
+    <div id="citation" the "dropdown-content">
         <p>This project analyzes uploaded PDFs by combining extracted text with relevant external knowledge to deliver accurate, structured outputs—making document understanding smarter and more efficient.</p>
         <p>Tech stack used: Python, AWS Sagemaker, S3 bucket, Lambda Functions, Docker, Django, Claude Haiku, Amazon-Bedrock, Amazon Textract, RAG, AWS RDS, Agile</p>
         <button onclick="toggleDropdown('citationFlow')">Show Flowchart</button>
