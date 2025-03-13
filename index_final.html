@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jayashree Harinath's Portfolio</title>
+<style>
+    body { 
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        background: url('background_image.jpg') no-repeat center center fixed; 
+        background-size: cover;
+        color: #fff;
+        padding: 20px;
+        margin: 0;
+    }
+    .profile, .contact, h2 { text-align: center; }
+    .project { 
+        margin: 20px auto; 
+        width: 80%;
+        text-align: center;
+    }
+    .dropdown-content { 
+        display: none; 
+        padding: 10px; 
+        background-color: rgba(0,0,0,0.8); 
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+        margin-top: 5px;
+    }
+    button {
+        background-color: #00aaff;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    button:hover {
+        background-color: #0088cc;
+    }
+    img { width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto; }
+</style>
+</head>
+<body>
+<div class="profile">
+    <img src="My_Photo.jpg" alt="Jayashree Harinath" width="200">
+    <h1>Hi there! I’m Jayashree Harinath</h1>
+    <p>A software developer with roots in India and currently calling the UK my home. Excited to connect and share ideas with you!
+    I absolutely love staying active with yoga, unwinding with a good movie, and diving into the exciting world of new technologies—especially in software development and AI. There’s always something fascinating to learn and explore!</p>
+</div>
+
+<h2>Experience</h2>
+<p>With over 4 years of experience as a Python Backend Developer,
+I’ve had the opportunity to work on exciting projects involving cloud services like AWS, databases, and even cutting-edge technologies like LLMs. I’m passionate about building robust backend systems and exploring the ever-evolving world of tech!</p>
+
+<h2>Projects worked on</h2>
+<div class="project">
+    <button onclick="toggleDropdown('turing')">Turing: Google Gemini LLM</button>
+    <div id="turing" class="dropdown-content">
+        <p>This project fine-tunes the Gemini LLM to automatically generate Python code for creating custom graphs. Users just provide a dataset and choose the type of graph they want, and the LLM produces ready-to-run code for their visualization.</p>
+        <p>Tech stack used: Python, Google collab notebooks, AWS, Data Analytics, Git, Agile</p>
+        <button onclick="toggleDropdown('turingFlow')">Show Flowchart</button>
+        <div id="turingFlow" class="dropdown-content"><img src="Google Gemini Flowchart.png" alt="Turing Project Flowchart"></div>
+    </div>
+</div>
+
+<div class="project">
+    <button onclick="toggleDropdown('citation')">Citation: Document Scanner</button>
+    <div id="citation" class="dropdown-content">
+        <p>This project analyzes uploaded PDFs by combining extracted text with relevant external knowledge to deliver accurate, structured outputs—making document understanding smarter and more efficient.</p>
+        <p>Tech stack used: Python, AWS Sagemaker, S3 bucket, Lambda Functions, Docker, Django, Claude Haiku, Amazon-Bedrock, Amazon Textract, RAG, AWS RDS, Agile</p>
+        <button onclick="toggleDropdown('citationFlow')">Show Flowchart</button>
+        <div id="citationFlow" class="dropdown-content"><img src="Citation-Flowchart.png" alt="Citation Project Flowchart"></div>
+    </div>
+</div>
+
+<div class="project">
+    <button onclick="toggleDropdown('innominds')">Innominds: Invesco investment management</button>
+    <div id="innominds" class="dropdown-content">
+        <p>Developed an investment management portal using FastAPI and Python, focusing on seamless data integration and API development. The portal ensures secure authentication and efficient data handling, providing users with a streamlined experience for managing investments.</p>
+        <p>Tech stack used: Python, Pycharm, FastAPI, Swagger, Dbeaver, SqlAlchemy, Docker, AWS, Git, Agile</p>
+        <button onclick="toggleDropdown('innomindsFlow')">Show Flowchart</button>
+        <div id="innomindsFlow" class="dropdown-content"><img src="Invesco.png" alt="Innominds Project Flowchart"></div>
+    </div>
+</div>
+
+<div class="project">
+    <button onclick="toggleDropdown('mkCorporate')">MK Corporate: HRMS</button>
+    <div id="mkCorporate" class="dropdown-content">
+        <p>Worked on an HRMS project to streamline HR operations like attendance tracking, leave management, holiday calendars, and policy sharing. Designed and developed REST APIs, handled user authentication, secure file storage, and database management.</p>
+        <p>Tech stack used: Python, Pycharm, Django, PostgreSQL, AWS, Git, Agile, Postman</p>
+        <button onclick="toggleDropdown('mkCorporateFlow')">Show Flowchart</button>
+        <div id="mkCorporateFlow" class="dropdown-content"><img src="HRMS-Flowchart.png" alt="MK Corporate Project Flowchart"></div>
+    </div>
+</div>
+
+<div class="contact">
+    <h2>Contact Me</h2>
+    <p>Feel free to connect with me on LinkedIn or reach out via email to know more about my work and projects. I’d be happy to chat!</p>
+    <p><a href="https://www.linkedin.com/in/jayashree-harinath-878b35252/">LinkedIn Profile</a> | Email: jayashreeh0475@gmail.com</p>
+</div>
+
+<script>
+function toggleDropdown(id) {
+    var element = document.getElementById(id);
+    if (element.style.display === 'none') {
+        element.style.display = 'block';
+    } else {
+        element.style.display = 'none';
+    }
+}
+</script>
+</body>
+</html>
