@@ -29,7 +29,7 @@
         display: none; 
         padding: 10px; 
         background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black background */
-        color: #fff; /* White text inside dropdowns */
+        color: #fff; /* Ensures white text inside dropdowns */
         border: 1px solid #ccc;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0,0,0,0.5);
@@ -59,11 +59,12 @@
 </head>
 <body>
 <div class="profile">
-    <img src="My_Photo.jpg" alt="Jayashree Harinath" width="100" height="60">
+    <img src="My_Photo.jpg" alt="Jayashree Harinath" width="100" height="60"> 
     <h1>Hi there! I’m Jayashree Harinath</h1>
     <p>A software developer with roots in India and currently calling the UK my home. Excited to connect and share ideas with you!
     I absolutely love staying active with yoga, unwinding with a good movie, and diving into the exciting world of new technologies—especially in software development and AI. There’s always something fascinating to learn and explore!</p>
 </div>
+
 <!-- Adding the tech screenshot before projects -->
 <img src="Screenshot 2025-03-13 212539.png" alt="Tech Stack Screenshot" style="width:100%; margin-top:20px;">
 
@@ -84,7 +85,7 @@ I’ve had the opportunity to work on exciting projects involving cloud services
 
 <div class="project">
     <button onclick="toggleDropdown('citation')">Citation: Document Scanner</button>
-    <div id="citation" the "dropdown-content">
+    <div id="citation" class="dropdown-content">
         <p>This project analyzes uploaded PDFs by combining extracted text with relevant external knowledge to deliver accurate, structured outputs—making document understanding smarter and more efficient.</p>
         <p>Tech stack used: Python, AWS Sagemaker, S3 bucket, Lambda Functions, Docker, Django, Claude Haiku, Amazon-Bedrock, Amazon Textract, RAG, AWS RDS, Agile</p>
         <button onclick="toggleDropdown('citationFlow')">Show Flowchart</button>
