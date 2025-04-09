@@ -1,163 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jayashree Harinath's Portfolio</title>
-<style>
-    body { 
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-        background: url('background_image.jpg') no-repeat center center fixed; 
-        background-size: cover;
-        background-color: rgba(255, 255, 255, 0.5); /* Adds white to lighten the background image */
-        color: #000; /* Text color outside dropdowns */
-        padding: 20px;
-        margin: 0;
-        font-size: 26px; /* Increased font size for better readability */
-    }
-    .profile, .contact, h2 { text-align: center; }
-    .profile img {
-        width: 100px; /* Reduced width */
-        height: auto; /* Maintains aspect ratio */
-    }
-    .project { 
-        margin: 20px auto; 
-        width: 80%;
-        text-align: center;
-    }
-    .dropdown-content { 
-        display: none; 
-        padding: 10px; 
-        background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black background */
-        color: #fff; /* Ensures white text inside dropdowns */
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-        margin-top: 5px;
-        width: 90%; /* Ensures dropdowns are not full width */
-        margin-left: auto;
-        margin-right: auto;
-    }
-    button {
-        background-color: #00aaff;
-        border: none;
-        color: white;
-        padding: 12px 24px; /* Slightly larger buttons */
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 18px; /* Larger font size for buttons */
-        margin: 4px 2px;
-        cursor: pointer;
-        border-radius: 5px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
-    button:hover {
-        background-color: #0088cc;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jayashree Harinath | Software Developer Portfolio</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --gray: #95a5a6;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .intro {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+        
+        section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+        
+        .tech-stack {
+            text-align: center;
+            margin: 30px 0;
+        }
+        
+        .tech-stack img {
+            max-width: 80%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .project {
+            margin-bottom: 30px;
+            border-left: 4px solid var(--secondary);
+            padding-left: 20px;
+        }
+        
+        button {
+            background-color: var(--secondary);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            margin: 10px 0;
+            display: inline-block;
+        }
+        
+        button:hover {
+            background-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .dropdown-content {
+            display: none;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            margin-top: 15px;
+            border-left: 3px solid var(--accent);
+        }
+        
+        .dropdown-content p {
+            margin-bottom: 15px;
+        }
+        
+        .dropdown-content img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .certificates {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .certificates img {
+            max-width: 45%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .certificates img:hover {
+            transform: scale(1.03);
+        }
+        
+        .contact {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 10px;
+        }
+        
+        .contact a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            margin: 0 10px;
+        }
+        
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            header {
+                padding: 30px 0;
+            }
+            
+            .profile-img {
+                width: 150px;
+                height: 150px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .certificates img {
+                max-width: 100%;
+            }
+            
+            .tech-stack img {
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="profile">
-    <img src="My_Photo.jpg" alt="Jayashree Harinath" width="200" > 
-    <h1>Hi there! I’m Jayashree Harinath</h1>
-    <p>A software developer with roots in India and currently calling the UK my home. Excited to connect and share ideas with you!
-    I absolutely love staying active with yoga, unwinding with a good movie, and diving into the exciting world of new technologies—especially in software development and AI. There’s always something fascinating to learn and explore!</p>
-</div>
+    <div class="container">
+        <header>
+            <img src="My_Photo.jpg" alt="Jayashree Harinath" class="profile-img">
+            <h1>Jayashree Harinath</h1>
+            <p class="tagline">Python Backend Developer | AI Enthusiast</p>
+            <p class="intro">
+                A software developer with roots in India and currently based in the UK. 
+                Passionate about building robust backend systems and exploring cutting-edge technologies in AI and software development.
+                When not coding, I enjoy yoga, movies, and continuous learning.
+            </p>
+        </header>
 
-<!-- Adding the tech screenshot before projects -->
-<img src="logos info.png" alt="Tech Stack Screenshot" style="width:500px; height:500px; margin-top:20px; display:block; margin-left:auto; margin-right:auto;">
+        <section>
+            <h2>Technical Expertise</h2>
+            <div class="tech-stack">
+                <img src="logos info.png" alt="Tech Stack" style="max-height: 400px;">
+            </div>
+            <p>
+                With over 4 years of experience as a Python Backend Developer,
+                I've worked extensively with cloud services (AWS), databases, and LLMs.
+                My expertise spans from API development to implementing machine learning pipelines.
+            </p>
+        </section>
 
+        <section>
+            <h2>Professional Projects</h2>
+            
+            <div class="project">
+                <button onclick="toggleDropdown('turing')">Turing: Google Gemini LLM</button>
+                <div id="turing" class="dropdown-content">
+                    <p>AI powered Graph generation assistant that processes user-submitted datasets with natural language queries to generate Python code for data visualization.</p>
+                    <p><strong>Tech Stack:</strong> Python, Google Colab, GCP, Gemini Pro Vision, Vertex AI, FastAPI, Git, Agile</p>
+                    <button onclick="toggleDropdown('turingFlow')">View Architecture</button>
+                    <div id="turingFlow" class="dropdown-content">
+                        <img src="Gemini Pro Vision.png" alt="Turing Project Flowchart">
+                    </div>
+                </div>
+            </div>
 
-<h2>Experience</h2>
-<p>With over 4 years of experience as a Python Backend Developer,
-I’ve had the opportunity to work on exciting projects involving cloud services like AWS, databases, and even cutting-edge technologies like LLMs. I’m passionate about building robust backend systems and exploring the ever-evolving world of tech!</p>
+            <div class="project">
+                <button onclick="toggleDropdown('citation')">Citation: Document Scanner</button>
+                <div id="citation" class="dropdown-content">
+                    <p>Analyzes uploaded PDFs by combining extracted text with external knowledge to deliver accurate, structured outputs.</p>
+                    <p><strong>Tech Stack:</strong> Python, AWS Sagemaker, S3, Lambda, Docker, Django, Claude Haiku, Amazon Bedrock, Textract, RAG, RDS</p>
+                    <button onclick="toggleDropdown('citationFlow')">View Architecture</button>
+                    <div id="citationFlow" class="dropdown-content">
+                        <img src="Citation.png" alt="Citation Project Flowchart">
+                    </div>
+                </div>
+            </div>
 
-<h2>Projects Worked On</h2>
-<div class="project">
-    <button onclick="toggleDropdown('turing')">Turing: Google Gemini LLM</button>
-    <div id="turing" class="dropdown-content">
-        <p> AI powered Graph generation assitant ,here we are basically building a  system where users submit a dataset and a natural language query.
- The system then Generates Python code to genrate the graphs/visuals.</p>
-        <p>Tech stack used: Python, Google collab notebooks, GCP,Gemini Pro Vision, Data Analytics,Vertex AI,FastAPI Git, Agile</p>
-        <button onclick="toggleDropdown('turingFlow')">Show Flowchart</button>
-        <div id="turingFlow" class="dropdown-content"><img src="Gemini Pro Vision.png" alt="Turing Project Flowchart"></div>
+            <div class="project">
+                <button onclick="toggleDropdown('innominds')">Invesco Investment Portal</button>
+                <div id="innominds" class="dropdown-content">
+                    <p>Developed an investment management portal with secure authentication and efficient data handling using FastAPI.</p>
+                    <p><strong>Tech Stack:</strong> Python, FastAPI, Swagger, SQLAlchemy, Docker, AWS, Git</p>
+                    <button onclick="toggleDropdown('innomindsFlow')">View Architecture</button>
+                    <div id="innomindsFlow" class="dropdown-content">
+                        <img src="Invesco.png" alt="Innominds Project Flowchart">
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <button onclick="toggleDropdown('mkCorporate')">MK Corporate: HRMS</button>
+                <div id="mkCorporate" class="dropdown-content">
+                    <p>HR management system with attendance tracking, leave management, and policy sharing features.</p>
+                    <p><strong>Tech Stack:</strong> Python, Django, PostgreSQL, AWS, Git, Agile</p>
+                    <button onclick="toggleDropdown('mkCorporateFlow')">View Architecture</button>
+                    <div id="mkCorporateFlow" class="dropdown-content">
+                        <img src="HRMS-Flowchart.png" alt="MK Corporate Project Flowchart">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Personal Projects</h2>
+            
+            <div class="project">
+                <button onclick="toggleDropdown('playo')">AI Solution for Playo App</button>
+                <div id="playo" class="dropdown-content">
+                    <p>AI-powered feature for sports app that enhances user experience with smart recommendations.</p>
+                    <a href="https://jayashree0475.github.io/Playo-AI-Webpage/" target="_blank">
+                        <button>View Live Project</button>
+                    </a>
+                </div>
+            </div>
+
+            <div class="project">
+                <button onclick="toggleDropdown('dvcmlflow')">Data Pipeline with DVC and MLflow</button>
+                <div id="dvcmlflow" class="dropdown-content">
+                    <p>End-to-end machine learning pipeline demonstrating reproducibility and experiment tracking.</p>
+                    <button onclick="toggleDropdown('mlflowPipelineFlow')">View Architecture</button>
+                    <div id="mlflowPipelineFlow" class="dropdown-content">
+                        <img src="MlFlow Pipeline.png" alt="MLflow Pipeline Flowchart">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Certifications</h2>
+            <div class="certificates">
+                <img src="OpenAI API for Python Developers.png" alt="OpenAI API Certification">
+                <img src="AI and Datascience Product Management Certificate.png" alt="AI Product Management Certification">
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2>Get In Touch</h2>
+            <p>I'm always open to discussing new opportunities, collaborations, or just chatting about technology.</p>
+            <p>
+                <a href="https://www.linkedin.com/in/jayashree-harinath-878b35252/">LinkedIn</a> | 
+                Email: jayashreeh0475@gmail.com
+            </p>
+        </section>
     </div>
-</div>
 
-<div class="project">
-    <button onclick="toggleDropdown('citation')">Citation: Document Scanner</button>
-    <div id="citation" class="dropdown-content">
-        <p>This project analyzes uploaded PDFs by combining extracted text with relevant external knowledge to deliver accurate, structured outputs—making document understanding smarter and more efficient.</p>
-        <p>Tech stack used: Python, AWS Sagemaker, S3 bucket, Lambda Functions, Docker, Django, Claude Haiku, Amazon-Bedrock, Amazon Textract, RAG, AWS RDS, Agile</p>
-        <button onclick="toggleDropdown('citationFlow')">Show Flowchart</button>
-        <div id="citationFlow" class="dropdown-content"><img src="Citation.png" alt="Citation Project Flowchart"></div>
-    </div>
-</div>
-
-<div class="project">
-    <button onclick="toggleDropdown('innominds')">Innominds: Invesco investment management</button>
-    <div id="innominds" class="dropdown-content">
-        <p>Developed an investment management portal using FastAPI and Python, focusing on seamless data integration and API development. The portal ensures secure authentication and efficient data handling, providing users with a streamlined experience for managing investments.</p>
-        <p>Tech stack used: Python, Pycharm, FastAPI, Swagger, Dbeaver, SqlAlchemy, Docker, AWS, Git, Agile</p>
-        <button onclick="toggleDropdown('innomindsFlow')">Show Flowchart</button>
-        <div id="innomindsFlow" class="dropdown-content"><img src="Invesco.png" alt="Innominds Project Flowchart"></div>
-    </div>
-</div>
-
-<div class="project">
-    <button onclick="toggleDropdown('mkCorporate')">MK Corporate: HRMS</button>
-    <div id="mkCorporate" class="dropdown-content">
-        <p>Worked on an HRMS project to streamline HR operations like attendance tracking, leave management, holiday calendars, and policy sharing. Designed and developed REST APIs, handled user authentication, secure file storage, and database management.</p>
-        <p>Tech stack used: Python, Pycharm, Django, PostgreSQL, AWS, Git, Agile, Postman</p>
-        <button onclick="toggleDropdown('mkCorporateFlow')">Show Flowchart</button>
-        <div id="mkCorporateFlow" class="dropdown-content"><img src="HRMS-Flowchart.png" alt="MK Corporate Project Flowchart"></div>
-    </div>
-</div>
-
-<h2>Personal Projects</h2>
-<div class="project">
-    <button onclick="toggleDropdown('playo')">AI Driven Solution for Playo App</button>
-    <div id="playo" class="dropdown-content">
-        <p>Check out the AI-powered feature I built for Playo App:</p>
-        <a href="https://jayashree0475.github.io/Playo-AI-Webpage/" target="_blank">Visit Playo AI Webpage</a>
-    </div>
-</div>
-
-<div class="project">
-    <button onclick="toggleDropdown('dvcmlflow')">Data Pipeline with DVC and MLflow</button>
-    <div id="dvcmlflow" class="dropdown-content">
-        <p>This project demonstrates how to build an end-to-end machine learning pipeline using DVC and MLflow...</p>
-        <button onclick="toggleDropdown('mlflowPipelineFlow')">Show Flowchart</button>
-        <div id="mlflowPipelineFlow" class="dropdown-content">
-            <img src="MlFlow Pipeline.png" alt="MLflow Pipeline Flowchart">
-        </div>
-    </div>
-</div>    
-<!-- Certificates Section -->
-<div class="certificates">
-    <h2>Certificates</h2>
-    <img src="OpenAI API for Python Developers.png" alt="Certificate: OpenAI API for Python Developers">
-</div>
-
-<div class="certificates">
-    <img src="AI and Datascience Product Management Certificate.png" alt="Certificate: AI and Datascience Product Management Certificate">
-</div>
-<div class="contact">
-    <h2>Contact Me</h2>
-    <p>Feel free to connect with me on LinkedIn or reach out via email to know more about my work and projects. I’d be happy to chat!</p>
-    <p><a href="https://www.linkedin.com/in/jayashree-harinath-878b35252/">LinkedIn Profile</a> | Email: jayashreeh0475@gmail.com</p>
-</div>
-
-<script>
-function toggleDropdown(id) {
-    var element = document.getElementById(id);
-    if (element.style.display === 'none') {
-        element.style.display = 'block';
-    } else {
-        element.style.display = 'none';
-    }
-}
-</script>
+    <script>
+        function toggleDropdown(id) {
+            var element = document.getElementById(id);
+            if (element.style.display === 'none' || element.style.display === '') {
+                element.style.display = 'block';
+            } else {
+                element.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
