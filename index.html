@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jayashree Harinath | Software Developer Portfolio</title>
+    <title>Jayashree Harinath | Python Backend Developer</title>
     <style>
         :root {
             --primary: #2c3e50;
@@ -37,16 +37,25 @@
             border-radius: 0 0 20px 20px;
             margin-bottom: 30px;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        
+        .profile-container {
+            width: 220px;
+            height: 220px;
+            margin: 0 auto 25px;
+            border-radius: 50%;
+            padding: 8px;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         
         .profile-img {
-            width: 180px;
-            height: 180px;
+            width: 100%;
+            height: 100%;
             border-radius: 50%;
             object-fit: cover;
-            border: 5px solid white;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            margin-bottom: 20px;
+            object-position: top center;
         }
         
         h1 {
@@ -58,12 +67,14 @@
             font-size: 1.2rem;
             opacity: 0.9;
             margin-bottom: 20px;
+            font-weight: 500;
         }
         
         .intro {
             max-width: 800px;
             margin: 0 auto;
             font-size: 1.1rem;
+            line-height: 1.8;
         }
         
         section {
@@ -188,9 +199,9 @@
                 padding: 30px 0;
             }
             
-            .profile-img {
-                width: 150px;
-                height: 150px;
+            .profile-container {
+                width: 180px;
+                height: 180px;
             }
             
             h1 {
@@ -210,7 +221,9 @@
 <body>
     <div class="container">
         <header>
-            <img src="My_Photo.jpg" alt="Jayashree Harinath" class="profile-img">
+            <div class="profile-container">
+                <img src="My_Photo.jpg" alt="Jayashree Harinath" class="profile-img">
+            </div>
             <h1>Jayashree Harinath</h1>
             <p class="tagline">Python Backend Developer | AI Enthusiast</p>
             <p class="intro">
