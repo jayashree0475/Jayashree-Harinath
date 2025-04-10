@@ -190,6 +190,15 @@
             text-decoration: underline;
         }
         
+        .sub-project {
+            margin-top: 15px;
+            margin-left: 20px;
+        }
+        
+        .sub-project button {
+            background-color: var(--accent);
+        }
+        
         @media (max-width: 768px) {
             .container {
                 padding: 15px;
@@ -249,19 +258,44 @@
             <h2>Professional Projects</h2>
             
             <div class="project">
-                <button onclick="toggleDropdown('turing')">Turing: Google Gemini LLM</button>
+                <button onclick="toggleDropdown('turing')">Turing: Google Gemini LLC</button>
                 <div id="turing" class="dropdown-content">
-                    <p>AI powered Graph generation assistant that processes user-submitted datasets with natural language queries to generate Python code for data visualization.</p>
-                    <p><strong>Tech Stack:</strong> Python, Google Colab, GCP, Gemini Pro Vision, Vertex AI, FastAPI, Git, Agile</p>
-                    <button onclick="toggleDropdown('turingFlow')">View Architecture</button>
-                    <div id="turingFlow" class="dropdown-content">
-                        <img src="Gemini Pro Vision.png" alt="Turing Project Flowchart">
+                    <div class="sub-project">
+                        <button onclick="toggleDropdown('xai')">X.ai</button>
+                        <div id="xai" class="dropdown-content">
+                            <p><strong>Project Summary:</strong> Fine-tuning Meta's LLaMA 2 model to become an expert assistant for Python project guidance.</p>
+                            <p><strong>Tech Stack:</strong> Google Colab, Axolotl, PyTorch, Hugging Face Transformers, LoRA</p>
+                            <button onclick="toggleDropdown('xaiFlow')">View Flowchart</button>
+                            <div id="xaiFlow" class="dropdown-content">
+                                <img src="x.ai-Flowchart.png" alt="X.ai Project Flowchart">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="sub-project">
+                        <button onclick="toggleDropdown('characterai')">Character.ai</button>
+                        <div id="characterai" class="dropdown-content">
+                            <p><strong>Project Summary:</strong> Character.ai bot designed to simulate real interview experiences — including behavioral, system design, and technical rounds — to help candidates prepare for job interviews interactively.</p>
+                            <p><strong>Tech Stack:</strong> Google Colab, Axolotl, PyTorch, Hugging Face Transformers, LoRA</p>
+                        </div>
+                    </div>
+                    
+                    <div class="sub-project">
+                        <button onclick="toggleDropdown('graphAI')">AI Powered Graph Generation</button>
+                        <div id="graphAI" class="dropdown-content">
+                            <p><strong>Project Summary:</strong> AI powered Graph generation assistant that processes user-submitted datasets with natural language queries to generate Python code for data visualization.</p>
+                            <p><strong>Tech Stack:</strong> Python, Google Colab, GCP, Gemini Pro Vision, Vertex AI, FastAPI, Git, Agile</p>
+                            <button onclick="toggleDropdown('graphAIFlow')">View Flowchart</button>
+                            <div id="graphAIFlow" class="dropdown-content">
+                                <img src="Graph generator AI.png" alt="Graph Generator AI Flowchart">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="project">
-                <button onclick="toggleDropdown('citation')">Citation: Document Scanner</button>
+                <button onclick="toggleDropdown('citation')">Crisition: Document Scanner</button>
                 <div id="citation" class="dropdown-content">
                     <p>Analyzes uploaded PDFs by combining extracted text with external knowledge to deliver accurate, structured outputs.</p>
                     <p><strong>Tech Stack:</strong> Python, AWS Sagemaker, S3, Lambda, Docker, Django, Claude Haiku, Amazon Bedrock, Textract, RAG, RDS</p>
@@ -301,7 +335,7 @@
             <h2>Personal Projects</h2>
             
             <div class="project">
-                <button onclick="toggleDropdown('playo')">AI Solution for Playo App</button>
+                <button onclick="toggleDropdown('playo')">AI Solution for Plapp App</button>
                 <div id="playo" class="dropdown-content">
                     <p>AI-powered feature for sports app that enhances user experience with smart recommendations.</p>
                     <a href="https://jayashree0475.github.io/Playo-AI-Webpage/" target="_blank">
@@ -334,8 +368,8 @@
             <h2>Get In Touch</h2>
             <p>I'm always open to discussing new opportunities, collaborations, or just chatting about technology.</p>
             <p>
-                <a href="https://www.linkedin.com/in/jayashree-harinath-878b35252/">LinkedIn</a> | 
-                Email: jayashreeh0475@gmail.com
+                <a href="https://www.linkedin.com/in/jayashree-harinath-878b35252/" target="_blank">LinkedIn</a> | 
+                <a href="mailto:jayashreeh0475@gmail.com">Email: jayashreeh0475@gmail.com</a>
             </p>
         </section>
     </div>
